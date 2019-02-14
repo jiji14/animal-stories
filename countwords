@@ -1,0 +1,10 @@
+# count words
+
+def countWords(text):
+    word_list = text.split()
+    dic = {}
+    for word in word_list:
+        dic[word] = dic.get(word, 0) + 1
+    return dic
+    
+print(countWords("i like carrots like rabbits"))
