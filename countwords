@@ -6,5 +6,6 @@ def countWords(text):
     for word in word_list:
         dic[word] = dic.get(word, 0) + 1
     return dic
-    
-print(countWords("i like carrots like rabbits"))
+  
+dic = countWords("i like carrots like rabbit")
+print(countWords("i like carrots like rabbit"))
