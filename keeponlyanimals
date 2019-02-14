@@ -1,1 +1,9 @@
 #keep only animals 
+
+animal_dic = {}
+def keepAnimals():
+  for key, value in dic.items():
+    if key in animal_list:
+      animal_dic[key] = value
+  return animal_dic
+print (keepAnimals())
