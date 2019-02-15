@@ -7,5 +7,4 @@ def countWords(text):
         dic[word] = dic.get(word, 0) + 1
     return dic
   
-dic = countWords("i like carrots like rabbit")
 print(countWords("i like carrots like rabbit"))
