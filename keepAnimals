@@ -1,7 +1,0 @@
-def keepAnimals(animal_dic):
-  keepAnimals_dic = {}
-  for key, value in animal_dic.items():
-    if key in animal_list:
-      keepAnimals_dic[value] = key
-  return keepAnimals_dic
-print (keepAnimals({"i": 1, "like": 2, "carrots": 1, "rabbit": 1}))
