@@ -7,21 +7,12 @@ animal_list = ["hare", "rabbit", "tortoise", "goat", "hound", "duck", "ducking",
 
 def isAnimal(value):
     if value in animal_list:
-        value = True    
+        return True    
     else:
-        value = False
+        return False
         
 isAnimal("hare")
 isAnimal("carrot") 
 isAnimal("rabbit")
 
 
-# count words
-
-def countWords(text):
-    word_list = text.split()
-    dic = {}
-    for word in word_list:
-        dic[word] = dic.get(word, 0) + 1
-    
-countWords("i like carrots like rabbits")
