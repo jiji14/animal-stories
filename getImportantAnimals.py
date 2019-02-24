@@ -1,6 +1,6 @@
 # get most talked about animals
 
-def importantAnimals(keepAnimals_dic):
+def getImportantAnimals(keepAnimals_dic):
     if len(keepAnimals_dic) <= 2:
         animal_list =list(keepAnimals_dic.keys())
         return animal_list
@@ -13,5 +13,5 @@ def importantAnimals(keepAnimals_dic):
         return animal_list
 
             
-print (importantAnimals({"tortoise":2, "rabbit": 5, "goat": 7}))
-print (importantAnimals({"tortoise":2}))
+print (getImportantAnimals({"tortoise":2, "rabbit": 5, "goat": 7}))
+print (getImportantAnimals({"tortoise":2}))
