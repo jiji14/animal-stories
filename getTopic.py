@@ -1,28 +1,18 @@
-# getTopic
+## getTopic
 
 def getTopic(text):
+    
+    getTopic_1 = countWords(text)
+    getTopic_2 = keepAnimals(getTopic_1)
+    getTopic_3 = getImportantAnimals(getTopic_2)
 
-    animal_list = ["hare", "rabbit", "tortoise", "goat", "hound", "duck", "ducking", "fox", "lion", "boar", "ant", "grasshopper", 
-                "cat", "monkey", "dog", "mouse", "crow", "eagle", "wolf", "peacock"]
-    
-    word_list = text.split()
-    text_dic = {}
-    for word in word_list:
-        text_dic[word] = text_dic.get(word, 0) + 1
-    
-    keepAnimals_dic = {}
-    for word, count in text_dic.items():
-        if word in animal_list:
-            keepAnimals_dic[word] = count
-            
-    if len(keepAnimals_dic) <= 2:
-        animal_list =list(keepAnimals_dic.keys())
-        return animal_list
-    else:   
-        animal_list = list()
-        for animals in range(2):
-            maxdata = max(keepAnimals_dic, key=keepAnimals_dic.get)
-            animal_list.append(maxdata)
-        return animal_list
-       
-print (getTopic("On a hot summer day, a fox comes upon an orchard and sees a bunch of ripened grapes. It thinks: “Just what I need to quench my thirst.” It moves back a few paces, runs, and jumps but falls short of reaching the grapes. It tries in different ways to reach the bunch of grapes, but in vain. It finally gives up, and says to himself “I am sure they are sour anyway."))
+    return getTopic_3
+
+print (getTopic("""On a hot summer day, a fox comes upon an orchard and sees a bunch of ripened grapes. 
+It thinks: “Just what I need to quench my thirst.” It moves back a few paces, runs, and jumps but falls short of reaching the grapes. 
+It tries in different ways to reach the bunch of grapes, but in vain. It finally gives up, and says to himself “I am sure they are sour anyway."""))
+
+print (getTopic("""This is another interesting animal story for kids that brings a valuable moral lesson to motivate them. Enjoy it now! 
+One day, a strong and powerful hound was chasing a hare. After running for a long time, the tired hound gives up the hunt. 
+A herd of goats watching this mocks the hound, saying that the little one is better than the beast. 
+To this, the hound responds: “The rabbit was running for its life, I was only running for dinner. That is the difference between us"""))
