@@ -2,9 +2,9 @@
 
 def getTopic(text):
     
-    getTopic_1 = countWords(text)
-    getTopic_2 = keepAnimals(getTopic_1)
-    getTopic_3 = getImportantAnimals(getTopic_2)
+    wordsCount = countWords(text)
+    keepOnlyAnimals = keepAnimals(wordsCount)
+    importantAnimals = getImportantAnimals(keepOnlyAnimals)
 
     return getTopic_3
 
